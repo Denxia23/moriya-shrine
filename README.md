@@ -1,0 +1,2 @@
+# moriya-shrine
+landing page
