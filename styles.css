@@ -162,6 +162,7 @@ p {
 
 .the-shrine {
     justify-self: center;
+    width: 100%;
 }
 .shrine-img {
     height: 250px;
@@ -193,12 +194,13 @@ p {
     flex-direction: column;
     justify-content: center;
     gap: 50px;
+    width: 100%;
 }
 
 .member-card {
     box-shadow: 0 0 15px 2px rgba(0,0,0,0.3);
     border-radius: 8px;
-    padding: 60px 30px; 
+    padding: 50px 0; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -227,12 +229,12 @@ p {
     width: 200px;
 }
 
-.member-card .member-img {
-    width: 80%;
+.member-card .member-info {
+    width: 90%;
 }
 
-
-
-
+.member-card .member-img {
+    width: 90%;
+}
 
 /* End About Us */
