@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+html {
+    font-size: 10px;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+.section-title span {
+    color: #D9483B;
+}
+
+.sub-header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    font-family: "Philosopher", serif;
+}
+
+p {
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: 1.7rem;
+    letter-spacing: 0.05rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+.red-button {
+    color: #D9483B;
+    border: 2px solid #D9483B;
+    padding: 12px 35px;
+    display: inline-block;
+    transition: 0.2s ease;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+
+}
+
+.red-button:hover {
+    background-color: #D9483B;
+    color: white;
+}
+
+.red-button .button-img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -52%;
+    right: -13%;
+    z-index: -1;
+
+}
+
+
+/* Hero */
+#hero {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/images/background-moriya.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#hero .container {
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+#hero h1 {
+    font-size: 6rem;
+    line-height: 120%;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+#hero h1 span {
+    color: #D9483B;
+}
+
+/* End Hero */
+
+/* About Us */
+#about-us .container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+    justify-content: flex-start;
+}
+
+#about-us h1 {
+    margin-bottom: 80px;
+}
+.the-shrine {
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.shrine-img {
+    height: 250px;
+}
+
+.shrine-info {
+    padding: 40px 30px 30px;
+    box-shadow: 0 0 15px 2px rgba(0,0,0,0.3);
+}
+
+.the-shrine h2 {
+    margin-bottom: 20px;
+}
+
+.the-shrine p {
+    margin-bottom: 25px;
+}
+
+
+
+
+
+
+/* End About Us */
