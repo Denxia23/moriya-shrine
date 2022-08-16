@@ -345,7 +345,44 @@ p {
     font-weight: 500;
     font-size: 1.4rem;
 }
-
-
-
 /* End Contact */
+
+/* Footer */
+#footer {
+    background-color: #393E46;
+}
+#footer .footer {
+    min-height: auto;
+    min-height: 20vh;
+    color: white;
+    padding: 20px 0 10px;
+}
+
+#footer h2 {
+    margin-bottom: 10px;
+}
+
+#footer p {
+    margin-bottom: 5px;
+}
+
+#footer .footer-img {
+    width: 55px;
+    height: 55px;
+    margin: 5px;
+}
+
+#footer .footer-img img {
+    border: 2px solid #FFFFFF;
+}
+
+#footer .sources {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* End Footer */
