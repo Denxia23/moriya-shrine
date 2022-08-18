@@ -13,7 +13,9 @@ img {
 html {
     font-size: 10px;
     font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
 }
+
 
 a {
     text-decoration: none;
@@ -23,6 +25,7 @@ a {
     --red: #D9483B;
     --green: #028102;
     --blue: #8F60F6;
+    --grey: #393E46;
 }
 
 .container {
@@ -123,6 +126,136 @@ p {
     transform: rotate(-13deg);
 }
 
+ul {
+    list-style-type: none;
+}
+
+
+
+/* Header */
+
+
+/* End Header */
+#header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    transition: 0.3s ease background-color;
+}
+
+#header .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 4.5%;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    min-height: 8vh;
+}
+
+#header .logo a {
+    display: flex;
+    align-items: center;
+}
+
+#header .logo a h2 {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+#header .logo a img {
+    width: 42px;
+}
+
+#header nav ul {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #393E46;
+    gap: 5.2%;
+    transition: 0.5s ease left;
+}
+
+#header ul.active {
+    left: 0;
+}
+
+#header nav li {
+    display: inline-block;
+}
+
+#header nav ul a {
+    color: white;
+    padding: 20px;
+    font-size: 2.5rem;
+    width: 100%;
+    letter-spacing: 0.5px; 
+    transition: 0.2s ease color;  
+}
+
+#header nav li:hover a {
+    color: var(--red);
+}
+
+#header .hamburger {
+    background-color: transparent;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+}
+
+#header .hamburger.active .line::before {
+    top: 0;
+}
+
+#header .hamburger.active .line::after {
+    bottom: 0;
+}
+
+#header .line {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    position: relative;
+}
+
+#header .line::before {
+    content: "";
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: -6px;
+    transition: 0.2s ease top;
+}
+
+#header .line::after {
+    content: "";
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -6px;
+    transition: 0.2s ease bottom;
+}
+
+
 
 /* Hero */
 #hero {
@@ -133,7 +266,7 @@ p {
 
 #hero .hero {
     align-items: flex-start;
-    padding-left: 20px;
+    padding-left: 4.5%;
 }
 
 #hero h1 {
@@ -400,9 +533,24 @@ p {
 
 /* Media Queries */
 
-/* ??? */
+/* Tablet */ 
 @media only screen and (min-width: 768px) {
+    #header .header {
+        padding: 0.5% 4.5%;
+    }
     
+    #header .logo-img a img {
+        width: 50px;
+    }
+
+    #header .logo a h2 {
+        font-size: 2.1rem;
+    }
+    
+    #hero h1 {
+        font-size: 7.5rem;
+    }
+
     #about-us .member-card {
         flex-direction: row;
         align-items: flex-start;
@@ -431,20 +579,25 @@ p {
         flex-direction: row-reverse;
     }
 }
-
-/* Tablet */
-@media only screen and (min-width: 768px) {
-    /* Hero */
-    #hero h1 {
-        font-size: 7.5rem;
-    }
-   /* End Hero */
-}
-
 /* End Tablet */
 
 /* Desktop */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) { 
+    #header .hamburger {
+        display: none;
+    }
+
+    #header nav ul {
+        position: static;
+        height: auto;
+        flex-direction: row;
+        background-color: transparent;
+        gap: 1px
+    }
+
+    #header nav ul li a {
+        font-size: 2.1rem;
+    }
     
     #about-us .the-shrine {
         flex-direction: row;
